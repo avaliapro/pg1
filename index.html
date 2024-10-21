@@ -1,0 +1,2198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cinemark</title>
+
+    <!-- FONT GOOGLE POPPINS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap" rel="stylesheet">
+    <script src="../js/scripts.js"></script>
+    <style>
+        body {
+            width: 100%;
+            height: auto;
+            margin: 0;
+            padding: 0;
+            background-color: rgb(24, 24, 24);
+        }
+        .centralizado {
+            width: 300px;
+            background-color: rgb(0, 0, 0);
+            text-align: center;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            border-radius: 10px;
+            margin: 120px auto;
+        }
+        * {
+            font-family: "Poppins", sans-serif;
+            color: white;
+            padding: 0px;
+        }
+        #logocentral {
+            width: 90px;
+        }
+        #textoprincipalsptfy {
+            font-size: 23px;
+            font-weight: 700;
+        }
+        #descricaoiniciospotify {
+            color: rgb(168, 168, 168);
+            margin-top: -10px;
+            font-size: 14px;
+        }
+        #descricaoiniciospotifyy {
+            color: rgb(168, 168, 168);
+            font-size: 14px;
+            font-weight: 500;
+        }
+        #divisorlinha {
+            width: 95%;
+            height: 1px;
+            background-color: rgb(105, 105, 105);
+        }
+        #txtinputmeil {
+            color: rgb(168, 168, 168);
+        }
+        #logincadastro {
+            display: flex;
+            font-size: 15px;
+            width: 100%;
+            flex-direction: column;
+            text-align: left;
+        }
+        #inputcadastro, #nomeInput {
+            padding: 13px 10px;
+            color: rgb(168, 168, 168);
+            border-radius: 5px;
+            margin-top: 5px;
+            border: 1px solid rgb(168, 168, 168);
+            background-color: rgb(24, 24, 24);
+        }
+        #meuBotao, #meuBotao2, #meuBotao3, #meuBotao4, #meuBotao5, #meuBotao6, #meuBotao7, #meuBotao8, #meuBotao9, #meuBotao10 {
+            padding: 13px 10px;
+            background-color: rgb(54, 54, 54);
+            color: white;
+            margin-top: 10px;
+            border-radius: 50px;
+            border: 1px solid rgb(54, 54, 54);
+            text-decoration: none;
+            width: 90%;
+            font-weight: 600;
+        }
+        /* Estilo após a mudança de cor */
+        .verde {
+            background-color: rgb(1, 214, 97);
+            cursor: pointer; /* Muda o cursor para indicar que agora é clicável */
+        }
+        #topoFixo {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: black;
+            color: white;
+            padding: 15px 10px;
+            align-items: center;
+            display: flex;
+            justify-content: space-between;
+            text-align: center;
+        }
+        #logo {
+            width: 130px;
+        }
+        #saldoatual {
+            padding: 10px 15px;
+            border-radius: 10px;
+            margin-right: 20px;
+            background-color: #d61a01;
+        }
+        
+    </style>
+</head>
+<body id="1">
+    <div id="pag1">
+    <!-- TOPO FIXO -->
+    <div id="topoFixo">
+        <img src="../images/cinemark-logo-removebg-preview.png" id="logo">
+        <div id="saldoatual">
+            Saldo: R$ 100,00
+        </div>
+    </div>
+
+    <div class="centralizado">
+        <!-- IMAGEM DA LOGO -->
+        <img src="../images/cinemark-logo-removebg-preview.png" id="logocentral">
+
+        <!-- TEXTO POP UP -->
+        <p id="textoprincipalsptfy">
+            Olá, <b id="mensagem"></b>
+        </p>
+
+        <!-- DESCRICAO -->
+        <p id="descricaoiniciospotify">
+            Avalie o filme e <b>ganhe por isso</b>
+        </p> <br>
+
+        <!-- DADOS DE LOGIN -->
+        <div class="imagens"><img id="img" src="../images/capa coringa.webp" alt="" style="  
+            width: 90%;
+            height: auto;
+            border-radius: 15px; 
+            object-fit: cover; 
+        "></div> <br> <br> 
+
+        <!-- SISTEMA DE AVALIACAO -->
+        <style>
+#botaperguntas {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    margin-top: -20px;
+
+}
+
+#botaperguntas div {
+    padding: 10px 15px;
+    border-radius: 10px;
+    background-color: rgb(54, 54, 54);
+    color: white;
+    text-align: center;
+    flex: 1;
+    margin-left: 5px;
+}
+
+#botaperguntas div:first-child {
+    margin-left: 0;
+}
+
+/* Responsivo: ajusta o tamanho dos botões para caber na tela em dispositivos móveis */
+@media (max-width: 400px) {
+    #botaperguntas div {
+        padding: 10px 10px;
+    }
+}
+            #opcao, #opcaoo, #opcaooo, #opcaoooo {
+                padding: 10px 50px;
+                border-radius: 10px;
+                width: 90%;
+                background-color: rgb(54, 54, 54);
+                color: rgb(54, 54, 54);
+            }
+            #avalaiacao {
+                margin-top: -50px;
+            }
+
+
+
+            .popup-container {
+    position: fixed;
+    border-radius: 15px;
+    top: 50%;
+    left: 50%;
+    width: 90%;   
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    box-shadow: 0 0 100px rgba(0, 0, 0, 100);
+    display: none;
+    z-index: 10000;
+  }
+        </style>
+        <div id="avalaiacao">
+            <div id="perguntacompleta">
+                <p id="texytpergunta" class="perg1">De 1 a 5, qual a nota você daria para o filme "Coringa: Delírio a Dois"?</p>
+                <div id="botaperguntas">
+                    <div class="opcao">1</div>
+                    <div class="opcao" style="margin-left: 10px;">2</div>
+                    <div class="opcao" style="margin-left: 10px;">3</div>
+                    <div class="opcao" style="margin-left: 10px;">4</div>
+                    <div class="opcao" style="margin-left: 10px;">5</div>
+                </div>
+            </div>
+        
+            <div id="perguntacompleta">
+                <p id="texytpergunta" class="perg2">Você recomendaria "Coringa: Delírio a Dois" para seus amigos e familiares?</p>
+                <div id="botaperguntas">
+                    <div class="opcao-recomendacao">Sim</div>
+                    <div class="opcao-recomendacao" style="margin-left: 10px;">Não</div>
+                </div>
+            </div>
+        
+            <div id="perguntacompleta">
+                <p id="texytpergunta" class="perg3">Você acredita que esse filme deveria ser Livre para todos os públicos?</p>
+                <div id="botaperguntas">
+                    <div class="opcao-livre">Sim</div>
+                    <div class="opcao-livre" style="margin-left: 10px;">Não</div>
+                </div>
+            </div> 
+            
+            <script>
+                // Função genérica para selecionar um botão e desmarcar os outros no grupo
+                function selecionarUnico(grupo, selecionado) {
+                    let botoes = document.querySelectorAll(grupo);
+                    botoes.forEach(function(botao) {
+                        botao.style.backgroundColor = 'rgb(54, 54, 54)';
+                        botao.style.borderColor = 'rgb(54, 54, 54)';
+                    });
+                    selecionado.style.backgroundColor = 'rgb(214, 26, 1)';
+                    selecionado.style.borderColor = 'rgb(214, 26, 1)';
+                }
+        
+                // Event listeners para as opções de nota (1 a 5)
+                document.querySelectorAll('.opcao').forEach(function(botao) {
+                    botao.onclick = function() {
+                        selecionarUnico('.opcao', this);
+                    };
+                });
+        
+                // Event listeners para as opções de recomendação (Sim, Não)
+                document.querySelectorAll('.opcao-recomendacao').forEach(function(botao) {
+                    botao.onclick = function() {
+                        selecionarUnico('.opcao-recomendacao', this);
+                    };
+                });
+        
+                // Event listeners para as opções de público livre (Sim, Não)
+                document.querySelectorAll('.opcao-livre').forEach(function(botao) {
+                    botao.onclick = function() {
+                        selecionarUnico('.opcao-livre', this);
+                    };
+                });
+            </script>
+        </div>
+
+        
+
+ 
+
+          <!-- BOTÃO QUE MUDA E REDIRECIONA -->
+        <button type="button" id="meuBotao">Dê um feedback</button>
+
+        <div class="popup-container" id="popupB8" style="background-color: rgb(24, 24, 24); z-index: 9999;">
+            <div style="display: flex; flex-direction: column;">
+            <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script> 
+  
+            <dotlottie-player src="https://lottie.host/7c063f68-5460-4704-bc8d-9a5fd9c04f97/MasdDJB4QX.json" background="transparent.html" speed="1" style="width: 200; height: 200px; display: flex; margin: 0 auto; margin-top: -20px; margin-bottom: -20px;" loop="" autoplay=""></dotlottie-player>
+             
+             <span class="popup-text" style="font-size: 15px; margin-bottom: 18px;">Voce recebeu:</span>
+             <span class="popup-text" style="font-size: 40px; font-weight: bold; font-family: 'Montserrat', sans-serif; margin-top: -10px; color: white;">R$ 31,76</span>
+            </div>   
+        </div>    
+
+        <script>
+let redirecionarDepois = false;
+        
+            function redirecionar() {
+
+            }        
+
+            function mudarBotao() {
+                const botao = document.getElementById('meuBotao');
+                botao.style.backgroundColor = 'rgb(214, 26, 1)';
+                botao.style.borderColor = 'rgb(214, 26, 1)';
+                botao.style.cursor = 'pointer';
+                botao.innerText = 'Ir para o próximo';
+                botao.disabled = false;
+                
+                botao.onclick = function() {
+                showLoadingB8();
+            }
+};
+            
+
+        
+            // Temporizador de 5 segundos para chamar a função mudarBotao
+            setTimeout(mudarBotao, 6500);
+
+            // Captura o nome passado como parâmetro na URL
+            const params = new URLSearchParams(window.location.search);
+            const nome = params.get('nome');
+
+            // Exibe o nome no elemento com id 'mensagem'
+            document.getElementById('mensagem').innerText = nome ? nome : 'Visitante';
+            
+            
+        </script>
+
+        <p id="descricaoiniciospotifyy">
+            Este site é protegido pelo reCAPTCHA e está sujeito à <b style="color: rgb(214, 26, 1); font-weight: 500;">Política de Privacidade</b> e aos <b style="color: rgb(214, 26, 1); font-weight: 500;">Termos de Serviço</b> do Google.
+        </p>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="pag2" style="display:none">
+    <!-- TOPO FIXO -->
+    <div id="topoFixo">
+        <img src="../images/cinemark-logo-removebg-preview.png" id="logo">
+        <div id="saldoatual">
+            Saldo: R$ 131,76
+        </div>
+    </div>
+
+    <div class="centralizado">
+        <!-- IMAGEM DA LOGO -->
+        <img src="../images/cinemark-logo-removebg-preview.png" id="logocentral">
+
+        <!-- TEXTO POP UP -->
+        <p id="textoprincipalsptfy">
+            Agradecemos pela opinião! <b id="mensagem"></b>
+        </p>
+
+        <!-- DESCRICAO -->
+        <p id="descricaoiniciospotify">
+            Avalie o filme e <b>ganhe por isso</b>
+        </p> <br>
+        
+
+        <!-- DADOS DE LOGIN -->
+        <!--<iframe style="border-radius:10px;" src="https://open.spotify.com/embed/track/1okn8NTTHVQuP4hghJi2Ec?utm_source=generator" width="100%" height="200" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>-->
+<div class="imagens"><img src="../images/capa duna.png" alt="" style="  
+    width: 90%;
+    height: auto;
+    border-radius: 15px; 
+    object-fit: cover; 
+"></div> <br> <br> 
+
+<style>
+    .imagens{ 
+        width: 100%; 
+        height: auto;
+        
+        
+    }
+</style>
+        <!-- SISTEMA DE AVALIACAO -->
+        <style>
+            #botaperguntas {
+                display: flex;
+                padding: 10px;
+                margin-top: -20px;
+                justify-content: space-between;
+            }
+            #opcao, #opcaoo, #opcaooo, #opcaoooo {
+                padding: 10px 50px;
+                border-radius: 10px;
+                width: 90%;
+                background-color: rgb(54, 54, 54);
+                color: white;
+            }
+            #avalaiacao {
+                margin-top: -50px;
+            }
+        </style>
+        <style>
+            #botaperguntas {
+                display: flex;
+                justify-content: space-between;
+                padding: 10px;
+                margin-top: -20px;
+            
+            }
+            
+            #botaperguntas div {
+                padding: 10px 15px;
+                border-radius: 10px;
+                background-color: rgb(54, 54, 54);
+                color: white;
+                text-align: center;
+                flex: 1;
+                margin-left: 5px;
+            }
+            
+            #botaperguntas div:first-child {
+                margin-left: 0;
+            }
+            .popup-container {
+    position: fixed;
+    border-radius: 15px;
+    top: 50%;
+    left: 50%;
+    width: 90%;   
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    box-shadow: 0 0 100px rgba(0, 0, 0, 100);
+    display: none;
+    z-index: 10000;
+  }
+            
+            /* Responsivo: ajusta o tamanho dos botões para caber na tela em dispositivos móveis */
+            @media (max-width: 400px) {
+                #botaperguntas div {
+                    padding: 10px 10px;
+                }
+            }
+                        #opcao, #opcaoo, #opcaooo, #opcaoooo {
+                            padding: 10px 50px;
+                            border-radius: 10px;
+                            width: 90%;
+                            background-color: rgb(54, 54, 54);
+                            color: white;
+                        }
+                        #avalaiacao {
+                            margin-top: -50px;
+                        }
+                    </style>
+                    <div id="avalaiacao">
+                        <div id="perguntacompleta">
+                            <p id="texytpergunta">De 1 a 5, qual a nota você daria para o filme "Duna: Parte Dois"?</p>
+                            <div id="botaperguntas">
+                                <div class="opcao">1</div>
+                                <div class="opcao" style="margin-left: 10px;">2</div>
+                                <div class="opcao" style="margin-left: 10px;">3</div>
+                                <div class="opcao" style="margin-left: 10px;">4</div>
+                                <div class="opcao" style="margin-left: 10px;">5</div>
+                            </div>
+                        </div>
+                    
+                        <div id="perguntacompleta">
+                            <p id="texytpergunta">Você recomendaria "Duna: Parte Dois" para seus amigos e familiares?</p>
+                            <div id="botaperguntas">
+                                <div class="opcao-recomendacao">Sim</div>
+                                <div class="opcao-recomendacao" style="margin-left: 10px;">Não</div>
+                            </div>
+                        </div>
+                    
+                        <div id="perguntacompleta">
+                            <p id="texytpergunta">Você acredita que esse filme deveria ser Livre para todos os públicos?</p>
+                            <div id="botaperguntas">
+                                <div class="opcao-livre">Sim</div>
+                                <div class="opcao-livre" style="margin-left: 10px;">Não</div>
+                            </div>
+                        </div> 
+                        
+                        <script>
+                            // Função genérica para selecionar um botão e desmarcar os outros no grupo
+                            function selecionarUnico(grupo, selecionado) {
+                                let botoes = document.querySelectorAll(grupo);
+                                botoes.forEach(function(botao) {
+                                    botao.style.backgroundColor = 'rgb(54, 54, 54)';
+                                    botao.style.borderColor = 'rgb(54, 54, 54)';
+                                });
+                                selecionado.style.backgroundColor = 'rgb(214, 26, 1)';
+                                selecionado.style.borderColor = 'rgb(214, 26, 1)';
+                            }
+                    
+                            // Event listeners para as opções de nota (1 a 5)
+                            document.querySelectorAll('.opcao').forEach(function(botao) {
+                                botao.onclick = function() {
+                                    selecionarUnico('.opcao', this);
+                                };
+                            });
+                    
+                            // Event listeners para as opções de recomendação (Sim, Não)
+                            document.querySelectorAll('.opcao-recomendacao').forEach(function(botao) {
+                                botao.onclick = function() {
+                                    selecionarUnico('.opcao-recomendacao', this);
+                                };
+                            });
+                    
+                            // Event listeners para as opções de público livre (Sim, Não)
+                            document.querySelectorAll('.opcao-livre').forEach(function(botao) {
+                                botao.onclick = function() {
+                                    selecionarUnico('.opcao-livre', this);
+                                };
+                            });
+                        </script>
+                    </div>
+
+        <!-- BOTÃO QUE MUDA E REDIRECIONA -->
+        <button type="button" id="meuBotao2">Dê um feedback</button>
+
+        <div class="popup-container" id="popupB9" style="background-color: rgb(24, 24, 24); z-index: 9999;">
+            <div style="display: flex; flex-direction: column;">
+            <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script> 
+  
+            <dotlottie-player src="https://lottie.host/7c063f68-5460-4704-bc8d-9a5fd9c04f97/MasdDJB4QX.json" background="transparent.html" speed="1" style="width: 200; height: 200px; display: flex; margin: 0 auto; margin-top: -20px; margin-bottom: -20px;" loop="" autoplay=""></dotlottie-player>
+             
+             <span class="popup-text" style="font-size: 15px; margin-bottom: 18px;">Voce recebeu:</span>
+             <span class="popup-text" style="font-size: 40px; font-weight: bold; font-family: 'Montserrat', sans-serif; margin-top: -10px; color: white;">R$ 26,51</span>
+            </div>   
+        </div>  
+
+        <script>
+ 
+            function mudarBotao2() {
+                const botao = document.getElementById('meuBotao2');
+                botao.style.backgroundColor = 'rgb(214, 26, 1)';
+                botao.style.borderColor = 'rgb(214, 26, 1)';
+                botao.style.cursor = 'pointer';
+                botao.innerText = 'Ir para o próximo';
+                botao.disabled = false;
+
+                botao.onclick = function() {
+                    showLoadingB9();
+                }
+            }
+        
+            // Temporizador de 5 segundos para chamar a função mudarBotao
+            setTimeout(mudarBotao2, 14000);
+        
+
+        </script>
+        
+
+        <p id="descricaoiniciospotifyy">
+            Este site é protegido pelo reCAPTCHA e está sujeito à <b style="color: rgb(214, 26, 1); font-weight: 500;">Política de Privacidade</b> e aos <b style="color: rgb(214, 26, 1); font-weight: 500;">Termos de Serviço</b> do Google.
+        </p>
+    </div>
+</div>
+
+
+
+<div id="pag3" style="display:none">
+    <!-- TOPO FIXO -->
+    <div id="topoFixo">
+        <img src="../images/cinemark-logo-removebg-preview.png" id="logo">
+        <div id="saldoatual">
+            Saldo: R$ 158,27
+        </div>
+    </div>
+
+    <div class="centralizado">
+        <!-- IMAGEM DA LOGO -->
+        <img src="../images/cinemark-logo-removebg-preview.png" id="logocentral">
+
+        <!-- TEXTO POP UP -->
+        <p id="textoprincipalsptfy">
+            Sua contribuição é muito valiosa para nós <b id="mensagem"></b>
+        </p>
+
+        <!-- DESCRICAO -->
+        <p id="descricaoiniciospotify">
+            Avalie o filme e <b>ganhe por isso</b>
+        </p> <br>
+
+        <!-- DADOS DE LOGIN -->
+        <!--<iframe style="border-radius:10px;" src="https://open.spotify.com/embed/track/1okn8NTTHVQuP4hghJi2Ec?utm_source=generator" width="100%" height="200" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>-->
+<div class="imagens"><img src="../images/capa vingadores.webp" alt="" style="  
+    width: 90%;
+    height: auto;
+    border-radius: 15px; 
+    object-fit: cover; 
+"></div> <br> <br> 
+
+<style>
+    .imagens{ 
+        width: 100%; 
+        height: auto;
+        
+        
+    }
+</style>
+        <!-- SISTEMA DE AVALIACAO -->
+        <style>
+            #botaperguntas {
+                display: flex;
+                padding: 10px;
+                margin-top: -20px;
+                justify-content: space-between;
+            }
+            #opcao, #opcaoo, #opcaooo, #opcaoooo {
+                padding: 10px 50px;
+                border-radius: 10px;
+                width: 90%;
+                background-color: rgb(54, 54, 54);
+                color: white;
+            }
+            #avalaiacao {
+                margin-top: -50px;
+            }
+            .popup-container {
+    position: fixed;
+    border-radius: 15px;
+    top: 50%;
+    left: 50%;
+    width: 90%;   
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    box-shadow: 0 0 100px rgba(0, 0, 0, 100);
+    display: none;
+    z-index: 10000;
+  }
+        </style>
+        <style>
+            #botaperguntas {
+                display: flex;
+                justify-content: space-between;
+                padding: 10px;
+                margin-top: -20px;
+            
+            }
+            
+            #botaperguntas div {
+                padding: 10px 15px;
+                border-radius: 10px;
+                background-color: rgb(54, 54, 54);
+                color: white;
+                text-align: center;
+                flex: 1;
+                margin-left: 5px;
+            }
+            
+            #botaperguntas div:first-child {
+                margin-left: 0;
+            }
+            
+            /* Responsivo: ajusta o tamanho dos botões para caber na tela em dispositivos móveis */
+            @media (max-width: 400px) {
+                #botaperguntas div {
+                    padding: 10px 10px;
+                }
+            }
+                        #opcao, #opcaoo, #opcaooo, #opcaoooo {
+                            padding: 10px 50px;
+                            border-radius: 10px;
+                            width: 90%;
+                            background-color: rgb(54, 54, 54);
+                            color: white;
+                        }
+                        #avalaiacao {
+                            margin-top: -50px;
+                        }
+                    </style>
+                    <div id="avalaiacao">
+                        <div id="perguntacompleta">
+                            <p id="texytpergunta">De 1 a 5, qual a nota você daria para o filme "Vingadores: Ultimato"?</p>
+                            <div id="botaperguntas">
+                                <div class="opcao">1</div>
+                                <div class="opcao" style="margin-left: 10px;">2</div>
+                                <div class="opcao" style="margin-left: 10px;">3</div>
+                                <div class="opcao" style="margin-left: 10px;">4</div>
+                                <div class="opcao" style="margin-left: 10px;">5</div>
+                            </div>
+                        </div>
+                    
+                        <div id="perguntacompleta">
+                            <p id="texytpergunta">Você recomendaria "Vingadores: Ultimato" para seus amigos e familiares?</p>
+                            <div id="botaperguntas">
+                                <div class="opcao-recomendacao">Sim</div>
+                                <div class="opcao-recomendacao" style="margin-left: 10px;">Não</div>
+                            </div>
+                        </div>
+                    
+                        <div id="perguntacompleta">
+                            <p id="texytpergunta">Você acredita que esse filme deveria ser Livre para todos os públicos?</p>
+                            <div id="botaperguntas">
+                                <div class="opcao-livre">Sim</div>
+                                <div class="opcao-livre" style="margin-left: 10px;">Não</div>
+                            </div>
+                        </div> 
+                        
+                        <script>
+                            // Função genérica para selecionar um botão e desmarcar os outros no grupo
+                            function selecionarUnico(grupo, selecionado) {
+                                let botoes = document.querySelectorAll(grupo);
+                                botoes.forEach(function(botao) {
+                                    botao.style.backgroundColor = 'rgb(54, 54, 54)';
+                                    botao.style.borderColor = 'rgb(54, 54, 54)';
+                                });
+                                selecionado.style.backgroundColor = 'rgb(214, 26, 1)';
+                                selecionado.style.borderColor = 'rgb(214, 26, 1)';
+                            }
+                    
+                            // Event listeners para as opções de nota (1 a 5)
+                            document.querySelectorAll('.opcao').forEach(function(botao) {
+                                botao.onclick = function() {
+                                    selecionarUnico('.opcao', this);
+                                };
+                            });
+                    
+                            // Event listeners para as opções de recomendação (Sim, Não)
+                            document.querySelectorAll('.opcao-recomendacao').forEach(function(botao) {
+                                botao.onclick = function() {
+                                    selecionarUnico('.opcao-recomendacao', this);
+                                };
+                            });
+                    
+                            // Event listeners para as opções de público livre (Sim, Não)
+                            document.querySelectorAll('.opcao-livre').forEach(function(botao) {
+                                botao.onclick = function() {
+                                    selecionarUnico('.opcao-livre', this);
+                                };
+                            });
+                        </script>
+                    </div>
+
+        <!-- BOTÃO QUE MUDA E REDIRECIONA -->
+        <button type="button" id="meuBotao3">Dê um feedback</button>
+
+        <div class="popup-container" id="popupB10" style="background-color: rgb(24, 24, 24); z-index: 9999;">
+            <div style="display: flex; flex-direction: column;">
+            <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script> 
+  
+            <dotlottie-player src="https://lottie.host/7c063f68-5460-4704-bc8d-9a5fd9c04f97/MasdDJB4QX.json" background="transparent.html" speed="1" style="width: 200; height: 200px; display: flex; margin: 0 auto; margin-top: -20px; margin-bottom: -20px;" loop="" autoplay=""></dotlottie-player>
+             
+             <span class="popup-text" style="font-size: 15px; margin-bottom: 18px;">Voce recebeu:</span>
+             <span class="popup-text" style="font-size: 40px; font-weight: bold; font-family: 'Montserrat', sans-serif; margin-top: -10px; color: white;">R$ 36,90</span>
+            </div>   
+        </div>  
+
+        <script>       
+            function mudarBotao3() {
+                const botao = document.getElementById('meuBotao3');
+                botao.style.backgroundColor = 'rgb(214, 26, 1)';
+                botao.style.borderColor = 'rgb(214, 26, 1)';
+                botao.style.cursor = 'pointer';
+                botao.innerText = 'Ir para o próximo';
+                botao.disabled = false;
+        
+                botao.onclick = function() {
+                    showLoadingB10();
+                }
+
+            }
+        
+            setTimeout(mudarBotao3, 22000);
+        </script>
+        
+
+        <p id="descricaoiniciospotifyy">
+            Este site é protegido pelo reCAPTCHA e está sujeito à <b style="color: rgb(214, 26, 1); font-weight: 500;">Política de Privacidade</b> e aos <b style="color: rgb(214, 26, 1); font-weight: 500;">Termos de Serviço</b> do Google.
+        </p>
+    </div></div>
+
+
+
+
+
+
+    <div id="pag4" style="display:none">
+        <!-- TOPO FIXO -->
+        <div id="topoFixo">
+            <img src="../images/cinemark-logo-removebg-preview.png" id="logo">
+            <div id="saldoatual">
+                Saldo: R$ 195,17
+            </div>
+        </div>
+    
+        <div class="centralizado">
+            <!-- IMAGEM DA LOGO -->
+            <img src="../images/cinemark-logo-removebg-preview.png" id="logocentral">
+    
+            <!-- TEXTO POP UP -->
+            <p id="textoprincipalsptfy">
+                Obrigado por compartilhar seus pensamentos conosco! <b id="mensagem"></b>
+            </p>
+    
+            <!-- DESCRICAO -->
+            <p id="descricaoiniciospotify">
+                Avalie o filme e <b>ganhe por isso</b>
+            </p> <br>
+    
+            <!-- DADOS DE LOGIN -->
+            <!--<iframe style="border-radius:10px;" src="https://open.spotify.com/embed/track/1okn8NTTHVQuP4hghJi2Ec?utm_source=generator" width="100%" height="200" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>-->
+    <div class="imagens"><img src="../images/capa john.webp" alt="" style="  
+        width: 90%;
+        height: auto;
+        border-radius: 15px; 
+        object-fit: cover; 
+    "></div> <br> <br> 
+    
+    <style>
+        .imagens{ 
+            width: 100%; 
+            height: auto;
+            
+            
+        }
+    </style>        <!-- SISTEMA DE AVALIACAO -->
+    <style>
+        #botaperguntas {
+            display: flex;
+            padding: 10px;
+            margin-top: -20px;
+            justify-content: space-between;
+        }
+        #opcao, #opcaoo, #opcaooo, #opcaoooo {
+            padding: 10px 50px;
+            border-radius: 10px;
+            width: 90%;
+            background-color: rgb(54, 54, 54);
+            color: white;
+        }
+        #avalaiacao {
+            margin-top: -50px;
+        }
+    </style>
+    <style>
+        #botaperguntas {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px;
+            margin-top: -20px;
+        
+        }
+        
+        #botaperguntas div {
+            padding: 10px 15px;
+            border-radius: 10px;
+            background-color: rgb(54, 54, 54);
+            color: white;
+            text-align: center;
+            flex: 1;
+            margin-left: 5px;
+        }
+        
+        #botaperguntas div:first-child {
+            margin-left: 0;
+        }
+        
+        /* Responsivo: ajusta o tamanho dos botões para caber na tela em dispositivos móveis */
+        @media (max-width: 400px) {
+            #botaperguntas div {
+                padding: 10px 10px;
+            }
+        }
+                    #opcao, #opcaoo, #opcaooo, #opcaoooo {
+                        padding: 10px 50px;
+                        border-radius: 10px;
+                        width: 90%;
+                        background-color: rgb(54, 54, 54);
+                        color: white;
+                    }
+                    #avalaiacao {
+                        margin-top: -50px;
+                    }
+                </style>
+                <div id="avalaiacao">
+                    <div id="perguntacompleta">
+                        <p id="texytpergunta">De 1 a 5, qual a nota você daria para o filme "John Wick: Parabellum"?</p>
+                        <div id="botaperguntas">
+                            <div class="opcao">1</div>
+                            <div class="opcao" style="margin-left: 10px;">2</div>
+                            <div class="opcao" style="margin-left: 10px;">3</div>
+                            <div class="opcao" style="margin-left: 10px;">4</div>
+                            <div class="opcao" style="margin-left: 10px;">5</div>
+                        </div>
+                    </div>
+                
+                    <div id="perguntacompleta">
+                        <p id="texytpergunta">Você recomendaria "John Wick: Parabellum" para seus amigos e familiares?</p>
+                        <div id="botaperguntas">
+                            <div class="opcao-recomendacao">Sim</div>
+                            <div class="opcao-recomendacao" style="margin-left: 10px;">Não</div>
+                        </div>
+                    </div>
+                
+                    <div id="perguntacompleta">
+                        <p id="texytpergunta">Você acredita que esse filme deveria ser Livre para todos os públicos?</p>
+                        <div id="botaperguntas">
+                            <div class="opcao-livre">Sim</div>
+                            <div class="opcao-livre" style="margin-left: 10px;">Não</div>
+                        </div>
+                    </div> 
+                    
+                    <script>
+                        // Função genérica para selecionar um botão e desmarcar os outros no grupo
+                        function selecionarUnico(grupo, selecionado) {
+                            let botoes = document.querySelectorAll(grupo);
+                            botoes.forEach(function(botao) {
+                                botao.style.backgroundColor = 'rgb(54, 54, 54)';
+                                botao.style.borderColor = 'rgb(54, 54, 54)';
+                            });
+                            selecionado.style.backgroundColor = 'rgb(214, 26, 1)';
+                            selecionado.style.borderColor = 'rgb(214, 26, 1)';
+                        }
+                
+                        // Event listeners para as opções de nota (1 a 5)
+                        document.querySelectorAll('.opcao').forEach(function(botao) {
+                            botao.onclick = function() {
+                                selecionarUnico('.opcao', this);
+                            };
+                        });
+                
+                        // Event listeners para as opções de recomendação (Sim, Não)
+                        document.querySelectorAll('.opcao-recomendacao').forEach(function(botao) {
+                            botao.onclick = function() {
+                                selecionarUnico('.opcao-recomendacao', this);
+                            };
+                        });
+                
+                        // Event listeners para as opções de público livre (Sim, Não)
+                        document.querySelectorAll('.opcao-livre').forEach(function(botao) {
+                            botao.onclick = function() {
+                                selecionarUnico('.opcao-livre', this);
+                            };
+                        });
+                    </script>
+                
+            </div>
+    
+            <!-- BOTÃO QUE MUDA E REDIRECIONA -->
+            <button type="button" id="meuBotao4">Dê um feedback</button>
+    
+            <div class="popup-container" id="popupB11" style="background-color: rgb(24, 24, 24); z-index: 9999;">
+                <div style="display: flex; flex-direction: column;">
+                <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script> 
+      
+                <dotlottie-player src="https://lottie.host/7c063f68-5460-4704-bc8d-9a5fd9c04f97/MasdDJB4QX.json" background="transparent.html" speed="1" style="width: 200; height: 200px; display: flex; margin: 0 auto; margin-top: -20px; margin-bottom: -20px;" loop="" autoplay=""></dotlottie-player>
+                 
+                 <span class="popup-text" style="font-size: 15px; margin-bottom: 18px;">Voce recebeu:</span>
+                 <span class="popup-text" style="font-size: 40px; font-weight: bold; font-family: 'Montserrat', sans-serif; margin-top: -10px; color: white;">R$ 49,56</span>
+                </div>   
+            </div>  
+    
+            <script>
+
+                function mudarBotao4() {
+                    const botao = document.getElementById('meuBotao4');
+                    botao.style.backgroundColor = 'rgb(214, 26, 1)';
+                    botao.style.borderColor = 'rgb(214, 26, 1)';
+                    botao.style.cursor = 'pointer';
+                    botao.innerText = 'Ir para o próximo';
+                    botao.disabled = false;
+            
+                    botao.onclick = function() {
+                        showLoadingB11();
+
+                    }
+
+                }
+            
+                // Temporizador de 5 segundos para chamar a função mudarBotao
+                setTimeout(mudarBotao4, 32000);
+            </script>
+            
+    
+            <p id="descricaoiniciospotifyy">
+                Este site é protegido pelo reCAPTCHA e está sujeito à <b style="color: rgb(214, 26, 1); font-weight: 500;">Política de Privacidade</b> e aos <b style="color: rgb(214, 26, 1); font-weight: 500;">Termos de Serviço</b> do Google.
+            </p>
+        </div>
+    </div>
+
+
+
+
+
+
+
+    <div id="pag5" style="display:none">
+        <!-- TOPO FIXO -->
+        <div id="topoFixo">
+            <img src="../images/cinemark-logo-removebg-preview.png" id="logo">
+            <div id="saldoatual">
+                Saldo: R$ 244,73
+            </div>
+        </div>
+    
+        <div class="centralizado">
+            <!-- IMAGEM DA LOGO -->
+            <img src="../images/cinemark-logo-removebg-preview.png" id="logocentral">
+    
+            <!-- TEXTO POP UP -->
+            <p id="textoprincipalsptfy">
+                Estamos gratos por seus comentários e sugestões!<b id="mensagem"></b>
+            </p>
+    
+            <!-- DESCRICAO -->
+            <p id="descricaoiniciospotify">
+                Avalie o filme e <b>ganhe por isso</b>
+            </p> <br>
+    
+            <!-- DADOS DE LOGIN -->
+            <!--<iframe style="border-radius:10px;" src="https://open.spotify.com/embed/track/1okn8NTTHVQuP4hghJi2Ec?utm_source=generator" width="100%" height="200" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>-->
+    <div class="imagens"><img src="../images/capa aranha.webp" alt="" style="  
+        width: 90%;
+        height: auto;
+        border-radius: 15px; 
+        object-fit: cover; 
+    "></div> <br> <br> 
+    
+    <style>
+        .imagens{ 
+            width: 100%; 
+            height: auto;
+            
+            
+        }
+    </style>
+                    <!-- SISTEMA DE AVALIACAO -->
+                    <style>
+                        #botaperguntas {
+                            display: flex;
+                            padding: 10px;
+                            margin-top: -20px;
+                            justify-content: space-between;
+                        }
+                        #opcao, #opcaoo, #opcaooo, #opcaoooo {
+                            padding: 10px 50px;
+                            border-radius: 10px;
+                            width: 90%;
+                            background-color: rgb(54, 54, 54);
+                            color: white;
+                        }
+                        #avalaiacao {
+                            margin-top: -50px;
+                        }
+                    </style>
+                    <style>
+                        #botaperguntas {
+                            display: flex;
+                            justify-content: space-between;
+                            padding: 10px;
+                            margin-top: -20px;
+                        
+                        }
+                        
+                        #botaperguntas div {
+                            padding: 10px 15px;
+                            border-radius: 10px;
+                            background-color: rgb(54, 54, 54);
+                            color: white;
+                            text-align: center;
+                            flex: 1;
+                            margin-left: 5px;
+                        }
+                        .popup-container {
+        position: fixed;
+        border-radius: 15px;
+        top: 50%;
+        left: 50%;
+        width: 90%;   
+        transform: translate(-50%, -50%);
+        background-color: #fff;
+        padding-bottom: 20px;
+        padding-top: 20px;
+        box-shadow: 0 0 100px rgba(0, 0, 0, 100);
+        display: none;
+        z-index: 10000;
+      }
+                        #botaperguntas div:first-child {
+                            margin-left: 0;
+                        }
+                        
+                        /* Responsivo: ajusta o tamanho dos botões para caber na tela em dispositivos móveis */
+                        @media (max-width: 400px) {
+                            #botaperguntas div {
+                                padding: 10px 10px;
+                            }
+                        }
+                                    #opcao, #opcaoo, #opcaooo, #opcaoooo {
+                                        padding: 10px 50px;
+                                        border-radius: 10px;
+                                        width: 90%;
+                                        background-color: rgb(54, 54, 54);
+                                        color: white;
+                                    }
+                                    #avalaiacao {
+                                        margin-top: -50px;
+                                    }
+                                </style>
+                                <div id="avalaiacao">
+                                    <div id="perguntacompleta">
+                                        <p id="texytpergunta">De 1 a 5, qual a nota você daria para o filme "Homem-Aranha Através do Aranhaverso"?</p>
+                                        <div id="botaperguntas">
+                                            <div class="opcao">1</div>
+                                            <div class="opcao" style="margin-left: 10px;">2</div>
+                                            <div class="opcao" style="margin-left: 10px;">3</div>
+                                            <div class="opcao" style="margin-left: 10px;">4</div>
+                                            <div class="opcao" style="margin-left: 10px;">5</div>
+                                        </div>
+                                    </div>
+                                
+                                    <div id="perguntacompleta">
+                                        <p id="texytpergunta">Você recomendaria "Homem-Aranha Através do Aranhaverso" para seus amigos e familiares?</p>
+                                        <div id="botaperguntas">
+                                            <div class="opcao-recomendacao">Sim</div>
+                                            <div class="opcao-recomendacao" style="margin-left: 10px;">Não</div>
+                                        </div>
+                                    </div>
+                                
+                                    <div id="perguntacompleta">
+                                        <p id="texytpergunta">Você acredita que esse filme deveria ser Livre para todos os públicos?</p>
+                                        <div id="botaperguntas">
+                                            <div class="opcao-livre">Sim</div>
+                                            <div class="opcao-livre" style="margin-left: 10px;">Não</div>
+                                        </div>
+                                    </div> 
+                                    
+                                    <script>
+                                        // Função genérica para selecionar um botão e desmarcar os outros no grupo
+                                        function selecionarUnico(grupo, selecionado) {
+                                            let botoes = document.querySelectorAll(grupo);
+                                            botoes.forEach(function(botao) {
+                                                botao.style.backgroundColor = 'rgb(54, 54, 54)';
+                                                botao.style.borderColor = 'rgb(54, 54, 54)';
+                                            });
+                                            selecionado.style.backgroundColor = 'rgb(214, 26, 1)';
+                                            selecionado.style.borderColor = 'rgb(214, 26, 1)';
+                                        }
+                                
+                                        // Event listeners para as opções de nota (1 a 5)
+                                        document.querySelectorAll('.opcao').forEach(function(botao) {
+                                            botao.onclick = function() {
+                                                selecionarUnico('.opcao', this);
+                                            };
+                                        });
+                                
+                                        // Event listeners para as opções de recomendação (Sim, Não)
+                                        document.querySelectorAll('.opcao-recomendacao').forEach(function(botao) {
+                                            botao.onclick = function() {
+                                                selecionarUnico('.opcao-recomendacao', this);
+                                            };
+                                        });
+                                
+                                        // Event listeners para as opções de público livre (Sim, Não)
+                                        document.querySelectorAll('.opcao-livre').forEach(function(botao) {
+                                            botao.onclick = function() {
+                                                selecionarUnico('.opcao-livre', this);
+                                            };
+                                        });
+                                    </script>
+                                </div>
+    
+            <!-- BOTÃO QUE MUDA E REDIRECIONA -->
+            <button type="button" id="meuBotao5">Dê um feedback</button>
+    
+            <div class="popup-container" id="popupB12" style="background-color: rgb(24, 24, 24);">
+                <div style="display: flex; flex-direction: column;">
+                <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script> 
+      
+                <dotlottie-player src="https://lottie.host/7c063f68-5460-4704-bc8d-9a5fd9c04f97/MasdDJB4QX.json" background="transparent.html" speed="1" style="width: 200; height: 200px; display: flex; margin: 0 auto; margin-top: -20px; margin-bottom: -20px;" loop="" autoplay=""></dotlottie-player>
+                 
+                 <span class="popup-text" style="font-size: 15px; margin-bottom: 18px;">Voce recebeu:</span>
+                 <span class="popup-text" style="font-size: 40px; font-weight: bold; font-family: 'Montserrat', sans-serif; margin-top: -10px; color: white;">R$ 31,84</span>
+                </div>   
+            </div>  
+    
+            <script>
+
+                function mudarBotao5() {
+                    const botao = document.getElementById('meuBotao5');
+                    botao.style.backgroundColor = 'rgb(214, 26, 1)';
+                    botao.style.borderColor = 'rgb(214, 26, 1)';
+                    botao.style.cursor = 'pointer';
+                    botao.innerText = 'Ir para o próximo';
+                    botao.disabled = false;
+            
+                    botao.onclick = function() {
+                        showLoadingB12();
+                    }
+
+                }
+            
+                // Temporizador de 5 segundos para chamar a função mudarBotao
+                setTimeout(mudarBotao5, 41000);
+            </script>
+            
+    
+            <p id="descricaoiniciospotifyy">
+                Este site é protegido pelo reCAPTCHA e está sujeito à <b style="color: rgb(214, 26, 1); font-weight: 500;">Política de Privacidade</b> e aos <b style="color: rgb(214, 26, 1); font-weight: 500;">Termos de Serviço</b> do Google.
+            </p>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div id="pag6"style="display:none">
+        <!-- TOPO FIXO -->
+        <div id="topoFixo">
+            <img src="../images/cinemark-logo-removebg-preview.png" id="logo">
+            <div id="saldoatual">
+                Saldo: R$ 276,57
+            </div>
+        </div>
+    
+        <div class="centralizado">
+            <!-- IMAGEM DA LOGO -->
+            <img src="../images/cinemark-logo-removebg-preview.png" id="logocentral">
+    
+            <!-- TEXTO POP UP -->
+            <p id="textoprincipalsptfy">
+                Obrigado por nos ajudar a melhorar com sua opinião! <b id="mensagem"></b>
+            </p>
+    
+            <!-- DESCRICAO -->
+            <p id="descricaoiniciospotify">
+                Avalie o filme e <b>ganhe por isso</b>
+            </p> <br>
+    
+            <!-- DADOS DE LOGIN -->
+            <!--<iframe style="border-radius:10px;" src="https://open.spotify.com/embed/track/1okn8NTTHVQuP4hghJi2Ec?utm_source=generator" width="100%" height="200" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>-->
+    <div class="imagens"><img src="../images/capa deadpool.webp" alt="" style="  
+        width: 90%;
+        height: auto;
+        border-radius: 15px; 
+        object-fit: cover; 
+    "></div> <br> <br> 
+    
+    <style>
+        .imagens{ 
+            width: 100%; 
+            height: auto;
+            
+            
+        }
+    </style>
+                    <!-- SISTEMA DE AVALIACAO -->
+                    <style>
+                        #botaperguntas {
+                            display: flex;
+                            padding: 10px;
+                            margin-top: -20px;
+                            justify-content: space-between;
+                        }
+                        #opcao, #opcaoo, #opcaooo, #opcaoooo {
+                            padding: 10px 50px;
+                            border-radius: 10px;
+                            width: 90%;
+                            background-color: rgb(54, 54, 54);
+                            color: white;
+                        }
+                        #avalaiacao {
+                            margin-top: -50px;
+                        }
+                    </style>
+                    <style>
+                        #botaperguntas {
+                            display: flex;
+                            justify-content: space-between;
+                            padding: 10px;
+                            margin-top: -20px;
+                        
+                        }
+                        
+                        #botaperguntas div {
+                            padding: 10px 15px;
+                            border-radius: 10px;
+                            background-color: rgb(54, 54, 54);
+                            color: white;
+                            text-align: center;
+                            flex: 1;
+                            margin-left: 5px;
+                        }
+                        
+                        #botaperguntas div:first-child {
+                            margin-left: 0;
+                        }
+                        .popup-container {
+        position: fixed;
+        border-radius: 15px;
+        top: 50%;
+        left: 50%;
+        width: 90%;   
+        transform: translate(-50%, -50%);
+        background-color: #fff;
+        padding-bottom: 20px;
+        padding-top: 20px;
+        box-shadow: 0 0 100px rgba(0, 0, 0, 100);
+        display: none;
+        z-index: 10000;
+      }
+                        
+                        /* Responsivo: ajusta o tamanho dos botões para caber na tela em dispositivos móveis */
+                        @media (max-width: 400px) {
+                            #botaperguntas div {
+                                padding: 10px 10px;
+                            }
+                        }
+                                    #opcao, #opcaoo, #opcaooo, #opcaoooo {
+                                        padding: 10px 50px;
+                                        border-radius: 10px;
+                                        width: 90%;
+                                        background-color: rgb(54, 54, 54);
+                                        color: white;
+                                    }
+                                    #avalaiacao {
+                                        margin-top: -50px;
+                                    }
+                                </style>
+                                <div id="avalaiacao">
+                                    <div id="perguntacompleta">
+                                        <p id="texytpergunta">De 1 a 5, qual a nota você daria para o filme "Deadpool & Wolverine"?</p>
+                                        <div id="botaperguntas">
+                                            <div class="opcao">1</div>
+                                            <div class="opcao" style="margin-left: 10px;">2</div>
+                                            <div class="opcao" style="margin-left: 10px;">3</div>
+                                            <div class="opcao" style="margin-left: 10px;">4</div>
+                                            <div class="opcao" style="margin-left: 10px;">5</div>
+                                        </div>
+                                    </div>
+                                
+                                    <div id="perguntacompleta">
+                                        <p id="texytpergunta">Você recomendaria "Deadpool & Wolverine" para seus amigos e familiares?</p>
+                                        <div id="botaperguntas">
+                                            <div class="opcao-recomendacao">Sim</div>
+                                            <div class="opcao-recomendacao" style="margin-left: 10px;">Não</div>
+                                        </div>
+                                    </div>
+                                
+                                    <div id="perguntacompleta">
+                                        <p id="texytpergunta">Você acredita que esse filme deveria ser Livre para todos os públicos?</p>
+                                        <div id="botaperguntas">
+                                            <div class="opcao-livre">Sim</div>
+                                            <div class="opcao-livre" style="margin-left: 10px;">Não</div>
+                                        </div>
+                                    </div> 
+                                    
+                                    <script>
+                                        // Função genérica para selecionar um botão e desmarcar os outros no grupo
+                                        function selecionarUnico(grupo, selecionado) {
+                                            let botoes = document.querySelectorAll(grupo);
+                                            botoes.forEach(function(botao) {
+                                                botao.style.backgroundColor = 'rgb(54, 54, 54)';
+                                                botao.style.borderColor = 'rgb(54, 54, 54)';
+                                            });
+                                            selecionado.style.backgroundColor = 'rgb(214, 26, 1)';
+                                            selecionado.style.borderColor = 'rgb(214, 26, 1)';
+                                        }
+                                
+                                        // Event listeners para as opções de nota (1 a 5)
+                                        document.querySelectorAll('.opcao').forEach(function(botao) {
+                                            botao.onclick = function() {
+                                                selecionarUnico('.opcao', this);
+                                            };
+                                        });
+                                
+                                        // Event listeners para as opções de recomendação (Sim, Não)
+                                        document.querySelectorAll('.opcao-recomendacao').forEach(function(botao) {
+                                            botao.onclick = function() {
+                                                selecionarUnico('.opcao-recomendacao', this);
+                                            };
+                                        });
+                                
+                                        // Event listeners para as opções de público livre (Sim, Não)
+                                        document.querySelectorAll('.opcao-livre').forEach(function(botao) {
+                                            botao.onclick = function() {
+                                                selecionarUnico('.opcao-livre', this);
+                                            };
+                                        });
+                                    </script>
+                                </div>
+    
+            <!-- BOTÃO QUE MUDA E REDIRECIONA -->
+            <button type="button" id="meuBotao6">Dê um feedback</button>
+    
+            <div class="popup-container" id="popupB13" style="background-color: rgb(24, 24, 24);">
+                <div style="display: flex; flex-direction: column;">
+                <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script> 
+      
+                <dotlottie-player src="https://lottie.host/7c063f68-5460-4704-bc8d-9a5fd9c04f97/MasdDJB4QX.json" background="transparent.html" speed="1" style="width: 200; height: 200px; display: flex; margin: 0 auto; margin-top: -20px; margin-bottom: -20px;" loop="" autoplay=""></dotlottie-player>
+                 
+                 <span class="popup-text" style="font-size: 15px; margin-bottom: 18px;">Voce recebeu:</span>
+                 <span class="popup-text" style="font-size: 40px; font-weight: bold; font-family: 'Montserrat', sans-serif; margin-top: -10px; color: white;">R$ 56,74</span>
+                </div>   
+            </div>  
+    
+            <script>
+   
+                function mudarBotao6() {
+                    const botao = document.getElementById('meuBotao6');
+                    botao.style.backgroundColor = 'rgb(214, 26, 1)';
+                    botao.style.borderColor = 'rgb(214, 26, 1)';
+                    botao.style.cursor = 'pointer';
+                    botao.innerText = 'Ir para o próximo';
+                    botao.disabled = false;
+            
+                    botao.onclick = function() {
+                        showLoadingB13();
+
+                    }
+
+                }
+            
+                // Temporizador de 5 segundos para chamar a função mudarBotao
+                setTimeout(mudarBotao6, 48000);
+            </script>
+            
+    
+            <p id="descricaoiniciospotifyy">
+                Este site é protegido pelo reCAPTCHA e está sujeito à <b style="color: rgb(214, 26, 1); font-weight: 500;">Política de Privacidade</b> e aos <b style="color: rgb(214, 26, 1); font-weight: 500;">Termos de Serviço</b> do Google.
+            </p>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+    
+<div id="pag7" style="display:none">
+    <!-- TOPO FIXO -->
+    <div id="topoFixo">
+        <img src="../images/cinemark-logo-removebg-preview.png" id="logo">
+        <div id="saldoatual">
+            Saldo: R$ 331,31
+        </div>
+    </div>
+
+    <div class="centralizado">
+        <!-- IMAGEM DA LOGO -->
+        <img src="../images/cinemark-logo-removebg-preview.png" id="logocentral">
+
+        <!-- TEXTO POP UP -->
+        <p id="textoprincipalsptfy">
+            Obrigado por compartilhar suas ideias, somos gratos por sua colaboração! <b id="mensagem"></b>
+        </p>
+
+        <!-- DESCRICAO -->
+        <p id="descricaoiniciospotify">
+            Avalie o filme e <b>ganhe por isso</b>
+        </p> <br>
+
+        <!-- DADOS DE LOGIN -->
+        <!--<iframe style="border-radius:10px;" src="https://open.spotify.com/embed/track/1okn8NTTHVQuP4hghJi2Ec?utm_source=generator" width="100%" height="200" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>-->
+<div class="imagens"><img src="../images/capa velozes.webp" alt="" style="  
+    width: 90%;
+    height: auto;
+    border-radius: 15px; 
+    object-fit: cover; 
+"></div> <br> <br> 
+
+<style>
+    .imagens{ 
+        width: 100%; 
+        height: auto;
+        
+        
+    }
+    .popup-container {
+    position: fixed;
+    border-radius: 15px;
+    top: 50%;
+    left: 50%;
+    width: 90%;   
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    box-shadow: 0 0 100px rgba(0, 0, 0, 100);
+    display: none;
+    z-index: 10000;
+  }
+</style>
+                <!-- SISTEMA DE AVALIACAO -->
+                <style>
+                    #botaperguntas {
+                        display: flex;
+                        padding: 10px;
+                        margin-top: -20px;
+                        justify-content: space-between;
+                    }
+                    #opcao, #opcaoo, #opcaooo, #opcaoooo {
+                        padding: 10px 50px;
+                        border-radius: 10px;
+                        width: 90%;
+                        background-color: rgb(54, 54, 54);
+                        color: white;
+                    }
+                    #avalaiacao {
+                        margin-top: -50px;
+                    }
+                </style>
+                <style>
+                    #botaperguntas {
+                        display: flex;
+                        justify-content: space-between;
+                        padding: 10px;
+                        margin-top: -20px;
+                    
+                    }
+                    
+                    #botaperguntas div {
+                        padding: 10px 15px;
+                        border-radius: 10px;
+                        background-color: rgb(54, 54, 54);
+                        color: white;
+                        text-align: center;
+                        flex: 1;
+                        margin-left: 5px;
+                    }
+                    
+                    #botaperguntas div:first-child {
+                        margin-left: 0;
+                    }
+                    
+                    /* Responsivo: ajusta o tamanho dos botões para caber na tela em dispositivos móveis */
+                    @media (max-width: 400px) {
+                        #botaperguntas div {
+                            padding: 10px 10px;
+                        }
+                    }
+                                #opcao, #opcaoo, #opcaooo, #opcaoooo {
+                                    padding: 10px 50px;
+                                    border-radius: 10px;
+                                    width: 90%;
+                                    background-color: rgb(54, 54, 54);
+                                    color: white;
+                                }
+                                #avalaiacao {
+                                    margin-top: -50px;
+                                }
+                            </style>
+                            <div id="avalaiacao">
+                                <div id="perguntacompleta">
+                                    <p id="texytpergunta">De 1 a 5, qual a nota você daria para o filme "Velozes e Furiosos 10"?</p>
+                                    <div id="botaperguntas">
+                                        <div class="opcao">1</div>
+                                        <div class="opcao" style="margin-left: 10px;">2</div>
+                                        <div class="opcao" style="margin-left: 10px;">3</div>
+                                        <div class="opcao" style="margin-left: 10px;">4</div>
+                                        <div class="opcao" style="margin-left: 10px;">5</div>
+                                    </div>
+                                </div>
+                            
+                                <div id="perguntacompleta">
+                                    <p id="texytpergunta">Você recomendaria "Velozes e Furiosos 10" para seus amigos e familiares?</p>
+                                    <div id="botaperguntas">
+                                        <div class="opcao-recomendacao">Sim</div>
+                                        <div class="opcao-recomendacao" style="margin-left: 10px;">Não</div>
+                                    </div>
+                                </div>
+                            
+                                <div id="perguntacompleta">
+                                    <p id="texytpergunta">Você acredita que esse filme deveria ser Livre para todos os públicos?</p>
+                                    <div id="botaperguntas">
+                                        <div class="opcao-livre">Sim</div>
+                                        <div class="opcao-livre" style="margin-left: 10px;">Não</div>
+                                    </div>
+                                </div> 
+                                
+                                <script>
+                                    // Função genérica para selecionar um botão e desmarcar os outros no grupo
+                                    function selecionarUnico(grupo, selecionado) {
+                                        let botoes = document.querySelectorAll(grupo);
+                                        botoes.forEach(function(botao) {
+                                            botao.style.backgroundColor = 'rgb(54, 54, 54)';
+                                            botao.style.borderColor = 'rgb(54, 54, 54)';
+                                        });
+                                        selecionado.style.backgroundColor = 'rgb(214, 26, 1)';
+                                        selecionado.style.borderColor = 'rgb(214, 26, 1)';
+                                    }
+                            
+                                    // Event listeners para as opções de nota (1 a 5)
+                                    document.querySelectorAll('.opcao').forEach(function(botao) {
+                                        botao.onclick = function() {
+                                            selecionarUnico('.opcao', this);
+                                        };
+                                    });
+                            
+                                    // Event listeners para as opções de recomendação (Sim, Não)
+                                    document.querySelectorAll('.opcao-recomendacao').forEach(function(botao) {
+                                        botao.onclick = function() {
+                                            selecionarUnico('.opcao-recomendacao', this);
+                                        };
+                                    });
+                            
+                                    // Event listeners para as opções de público livre (Sim, Não)
+                                    document.querySelectorAll('.opcao-livre').forEach(function(botao) {
+                                        botao.onclick = function() {
+                                            selecionarUnico('.opcao-livre', this);
+                                        };
+                                    });
+                                </script>
+                            </div>
+
+        <!-- BOTÃO QUE MUDA E REDIRECIONA -->
+        <button type="button" id="meuBotao7">Dê um feedback</button>
+
+        <div class="popup-container" id="popupB14" style="background-color: rgb(24, 24, 24);">
+            <div style="display: flex; flex-direction: column;">
+            <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script> 
+  
+            <dotlottie-player src="https://lottie.host/7c063f68-5460-4704-bc8d-9a5fd9c04f97/MasdDJB4QX.json" background="transparent.html" speed="1" style="width: 200; height: 200px; display: flex; margin: 0 auto; margin-top: -20px; margin-bottom: -20px;" loop="" autoplay=""></dotlottie-player>
+             
+             <span class="popup-text" style="font-size: 15px; margin-bottom: 18px;">Voce recebeu:</span>
+             <span class="popup-text" style="font-size: 40px; font-weight: bold; font-family: 'Montserrat', sans-serif; margin-top: -10px; color: white;">R$ 48,62</span>
+            </div>   
+        </div>  
+
+        <script>
+            function redirecionar() {
+
+            }        
+            function mudarBotao7() {
+                const botao = document.getElementById('meuBotao7');
+                botao.style.backgroundColor = 'rgb(214, 26, 1)';
+                botao.style.borderColor = 'rgb(214, 26, 1)';
+                botao.style.cursor = 'pointer';
+                botao.innerText = 'Ir para o próximo';
+                botao.disabled = false;
+        
+                botao.onclick = function() {
+                    showLoadingB14();
+                }
+            }
+        
+            // Temporizador de 5 segundos para chamar a função mudarBotao
+            setTimeout(mudarBotao7, 55000);
+        </script>
+        
+
+        <p id="descricaoiniciospotifyy">
+            Este site é protegido pelo reCAPTCHA e está sujeito à <b style="color: rgb(214, 26, 1); font-weight: 500;">Política de Privacidade</b> e aos <b style="color: rgb(214, 26, 1); font-weight: 500;">Termos de Serviço</b> do Google.
+        </p>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="pag8" style="display:none">
+    <!-- TOPO FIXO -->
+    <div id="topoFixo">
+        <img src="../images/cinemark-logo-removebg-preview.png" id="logo">
+        <div id="saldoatual">
+            Saldo: R$ 381,93
+        </div>
+    </div>
+
+    <div class="centralizado">
+        <!-- IMAGEM DA LOGO -->
+        <img src="../images/cinemark-logo-removebg-preview.png" id="logocentral">
+
+        <!-- TEXTO POP UP -->
+        <p id="textoprincipalsptfy">
+            Seu ponto de vista é essencial para nós; muito obrigado! <b id="mensagem"></b>
+        </p>
+
+        <!-- DESCRICAO -->
+        <p id="descricaoiniciospotify">
+            Avalie o filme e <b>ganhe por isso</b>
+        </p> <br>
+
+        <!-- DADOS DE LOGIN -->
+        <!--<iframe style="border-radius:10px;" src="https://open.spotify.com/embed/track/1okn8NTTHVQuP4hghJi2Ec?utm_source=generator" width="100%" height="200" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>-->
+<div class="imagens"><img src="../images/capa oppen.webp" alt="" style="  
+    width: 90%;
+    height: auto;
+    border-radius: 15px; 
+    object-fit: cover; 
+"></div> <br> <br> 
+
+<style>
+    .imagens{ 
+        width: 100%; 
+        height: auto;
+        
+        
+    }
+</style>
+                <!-- SISTEMA DE AVALIACAO -->
+                <style>
+                    #botaperguntas {
+                        display: flex;
+                        padding: 10px;
+                        margin-top: -20px;
+                        justify-content: space-between;
+                    }
+                    #opcao, #opcaoo, #opcaooo, #opcaoooo {
+                        padding: 10px 50px;
+                        border-radius: 10px;
+                        width: 90%;
+                        background-color: rgb(54, 54, 54);
+                        color: white;
+                    }
+                    #avalaiacao {
+                        margin-top: -50px;
+                    }
+                </style>
+                <style>
+                    #botaperguntas {
+                        display: flex;
+                        justify-content: space-between;
+                        padding: 10px;
+                        margin-top: -20px;
+                    
+                    }
+                    .popup-container {
+    position: fixed;
+    border-radius: 15px;
+    top: 50%;
+    left: 50%;
+    width: 90%;   
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    box-shadow: 0 0 100px rgba(0, 0, 0, 100);
+    display: none;
+    z-index: 10000;
+  }
+                    
+                    #botaperguntas div {
+                        padding: 10px 15px;
+                        border-radius: 10px;
+                        background-color: rgb(54, 54, 54);
+                        color: white;
+                        text-align: center;
+                        flex: 1;
+                        margin-left: 5px;
+                    }
+                    
+                    #botaperguntas div:first-child {
+                        margin-left: 0;
+                    }
+                    
+                    /* Responsivo: ajusta o tamanho dos botões para caber na tela em dispositivos móveis */
+                    @media (max-width: 400px) {
+                        #botaperguntas div {
+                            padding: 10px 10px;
+                        }
+                    }
+                                #opcao, #opcaoo, #opcaooo, #opcaoooo {
+                                    padding: 10px 50px;
+                                    border-radius: 10px;
+                                    width: 90%;
+                                    background-color: rgb(54, 54, 54);
+                                    color: white;
+                                }
+                                #avalaiacao {
+                                    margin-top: -50px;
+                                }
+                            </style>
+                            <div id="avalaiacao">
+                                <div id="perguntacompleta">
+                                    <p id="texytpergunta">De 1 a 5, qual a nota você daria para o filme "Oppenheimer"?</p>
+                                    <div id="botaperguntas">
+                                        <div class="opcao">1</div>
+                                        <div class="opcao" style="margin-left: 10px;">2</div>
+                                        <div class="opcao" style="margin-left: 10px;">3</div>
+                                        <div class="opcao" style="margin-left: 10px;">4</div>
+                                        <div class="opcao" style="margin-left: 10px;">5</div>
+                                    </div>
+                                </div>
+                            
+                                <div id="perguntacompleta">
+                                    <p id="texytpergunta">Você recomendaria "Oppenheimer" para seus amigos e familiares?</p>
+                                    <div id="botaperguntas">
+                                        <div class="opcao-recomendacao">Sim</div>
+                                        <div class="opcao-recomendacao" style="margin-left: 10px;">Não</div>
+                                    </div>
+                                </div>
+                            
+                                <div id="perguntacompleta">
+                                    <p id="texytpergunta">Você acredita que esse filme deveria ser Livre para todos os públicos?</p>
+                                    <div id="botaperguntas">
+                                        <div class="opcao-livre">Sim</div>
+                                        <div class="opcao-livre" style="margin-left: 10px;">Não</div>
+                                    </div>
+                                </div> 
+                                
+                                <script>
+                                    // Função genérica para selecionar um botão e desmarcar os outros no grupo
+                                    function selecionarUnico(grupo, selecionado) {
+                                        let botoes = document.querySelectorAll(grupo);
+                                        botoes.forEach(function(botao) {
+                                            botao.style.backgroundColor = 'rgb(54, 54, 54)';
+                                            botao.style.borderColor = 'rgb(54, 54, 54)';
+                                        });
+                                        selecionado.style.backgroundColor = 'rgb(214, 26, 1)';
+                                        selecionado.style.borderColor = 'rgb(214, 26, 1)';
+                                    }
+                            
+                                    // Event listeners para as opções de nota (1 a 5)
+                                    document.querySelectorAll('.opcao').forEach(function(botao) {
+                                        botao.onclick = function() {
+                                            selecionarUnico('.opcao', this);
+                                        };
+                                    });
+                            
+                                    // Event listeners para as opções de recomendação (Sim, Não)
+                                    document.querySelectorAll('.opcao-recomendacao').forEach(function(botao) {
+                                        botao.onclick = function() {
+                                            selecionarUnico('.opcao-recomendacao', this);
+                                        };
+                                    });
+                            
+                                    // Event listeners para as opções de público livre (Sim, Não)
+                                    document.querySelectorAll('.opcao-livre').forEach(function(botao) {
+                                        botao.onclick = function() {
+                                            selecionarUnico('.opcao-livre', this);
+                                        };
+                                    });
+                                </script>
+                            </div>
+
+        <!-- BOTÃO QUE MUDA E REDIRECIONA -->
+        <button type="button" id="meuBotao8">Dê um feedback</button>
+
+        <div class="popup-container" id="popupB15" style="background-color: rgb(24, 24, 24);">
+            <div style="display: flex; flex-direction: column;">
+            <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script> 
+  
+            <dotlottie-player src="https://lottie.host/7c063f68-5460-4704-bc8d-9a5fd9c04f97/MasdDJB4QX.json" background="transparent.html" speed="1" style="width: 200; height: 200px; display: flex; margin: 0 auto; margin-top: -20px; margin-bottom: -20px;" loop="" autoplay=""></dotlottie-player>
+             
+             <span class="popup-text" style="font-size: 15px; margin-bottom: 18px;">Voce recebeu:</span>
+             <span class="popup-text" style="font-size: 40px; font-weight: bold; font-family: 'Montserrat', sans-serif; margin-top: -10px; color: white;">R$ 88,07</span>
+            </div>   
+        </div>  
+
+        <script>
+
+  
+            function mudarBotao8() {
+                const botao = document.getElementById('meuBotao8');
+                botao.style.backgroundColor = 'rgb(214, 26, 1)';
+                botao.style.borderColor = 'rgb(214, 26, 1)';
+                botao.style.cursor = 'pointer';
+                botao.innerText = 'Ir para o próximo';
+                botao.disabled = false;
+        
+                botao.onclick = function() {
+                    showLoadingB15();
+                }
+            }
+        
+            // Temporizador de 5 segundos para chamar a função mudarBotao
+            setTimeout(mudarBotao8, 61000);
+        </script>
+        
+
+        <p id="descricaoiniciospotifyy">
+            Este site é protegido pelo reCAPTCHA e está sujeito à <b style="color: rgb(214, 26, 1); font-weight: 500;">Política de Privacidade</b> e aos <b style="color: rgb(214, 26, 1); font-weight: 500;">Termos de Serviço</b> do Google.
+        </p>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<style>
+    body, html {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        justify-content: space-around;
+        display: flex;
+        flex-direction: column;
+        background-color: rgb(24, 24, 24);
+        align-items: center;    /* Centraliza verticalmente */
+      }
+      .centralizado {
+        margin-top: 120px;
+        width: 300px;
+        background-color: rgb(0, 0, 0);
+        text-align: center;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        border-radius: 10px;
+      }
+      *{
+        font-family: "Poppins", sans-serif;
+        color: white;
+        padding: 0px;
+      }
+      #logocentral{
+        width: 90px;
+      }
+      #textoprincipalsptfy{
+        font-size: 23px;
+        margin: 20px 0px;
+        font-weight: 700;
+      }
+      #descricaoiniciospotify{
+        color: rgb(168, 168, 168);
+        margin-top: -10px;
+        margin-bottom: -10px;
+        font-size: 14px;
+      }
+      #descricaoiniciospotifyy{
+        color: rgb(168, 168, 168);
+        font-size: 14px;
+        font-weight: 500;
+      }
+      #divisorlinha{
+        width: 95%;
+        height: 1px;
+        background-color: rgb(105, 105, 105);
+      }
+      #txtinputmeil{
+        color: rgb(168, 168, 168);
+      }
+      #logincadastro{
+        display: flex;
+        font-size: 15px;
+        width: 100%;
+        flex-direction: column;
+        text-align: left;
+      }
+      #inputcadastro, #nomeInput{
+        padding: 13px 10px;
+        color: rgb(168, 168, 168);
+        border-radius: 5px;
+        margin-top: 5px;
+        width: 100%;
+        border: 1px solid rgb(168, 168, 168);
+        background-color: rgb(24, 24, 24);
+      }
+      #meuBotao{
+        padding: 13px 10px;
+        background-color: rgb(54, 54, 54);
+        color: white;
+        margin-top: 10px;
+        border-radius: 50px;
+        border: 1px solid rgb(54, 54, 54);
+        text-decoration: none;
+        width: 90%;
+        font-weight: 600;
+      }
+
+    /* Estilo após a mudança de cor */
+    .verde {
+        background-color:  rgb(214, 1, 1);
+        cursor: pointer; /* Muda o cursor para indicar que agora é clicável */
+    }
+      #topoFixo {
+        position: fixed;
+        top: 0; /* Define a posição no topo da página */
+        left: 0; /* Alinha à esquerda */
+        width: 100%; /* Faz a div ocupar toda a largura da página */
+        background-color: #000000; /* Cor de fundo (verde) */
+        color: white; /* Cor do texto */
+        padding: 15px 10px;
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+        text-align: center; /* Centraliza o texto */
+    }
+    #logo{
+        width: 130px;
+    }
+    #saldoatual{
+        padding: 10px 15px;
+        border-radius: 10px;
+        margin-right: 20px;
+        background-color:  rgb(214, 1, 1);
+    }
+    #txtnotificacao{
+        color: white;
+    }
+    #notificacao{
+        background-color: rgba(214, 1, 1, 0.434);
+        display: flex;
+        margin-top: -10px;
+        align-items: center;
+        margin-bottom: 20px;
+        text-align: center;
+        font-size: 14px;
+        justify-content: center;
+        width: 100%;
+        border-radius: 10px;
+        border: 1px solid  rgb(214, 1, 1);
+    }
+</style>
+<div id="pag9" style="display:none">
+    <!-- TOPO FIXO -->
+    <div id="topoFixo">
+        <img src="../images/cinemark-logo-removebg-preview.png" id="logo">
+        <div id="saldoatual">
+            Saldo: R$ 473,00
+        </div>
+    </div>
+
+    <div class="centralizado">
+        <!-- IMAGEM DA LOGO -->
+        <img src="../images/cinemark-logo-removebg-preview.png" id="logocentral">
+
+        <!-- TEXTO POP UP -->
+        <div id="textoprincipalsptfy" >
+            Limite diário atingido!</b>
+        </div>
+         
+        <div id="notificacao"style="margin-top: 1px;">
+           <p id="txtnotificacao"><b style="font-size: 25px;">SALDO: R$ 473,00</b></p>
+        </div>
+
+         <!-- DESCRICAO -->
+          <p id="descricaoiniciospotify">
+            Realize seu <b>PRIMEIRO SAQUE!</b><br><br><br>
+          </p>
+
+           <!-- SISTEMA DE AVALIACAO -->
+            <style>
+                #botaperguntas{
+                    display: flex;
+                    padding: 10px;
+                    margin-top: -20px;
+                    justify-content: space-between;
+                }
+                #opcao, #opcaoo, #opcaooo, #opcaoooo{
+                    padding: 10px 17px;
+                    border-radius: 10px;
+                    width: 30%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: column;
+                    background-color: rgb(54, 54, 54);
+                    color: white;
+                    cursor: pointer;
+                }
+            </style>
+            <div id="avalaiacao">
+                <div id="perguntacompleta">
+                    <p id="texytpergunta">Tipo chave Pix:</p>
+                    <div id="botaperguntas">
+                        <div id="opcao"><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
+                            <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6"></path>
+                          </svg>CPF/<br>CNPJ</div>
+                        <div id="opcao" style="margin-left: 10px;"><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-envelope-at-fill" viewBox="0 0 16 16">
+                            <path d="M2 2A2 2 0 0 0 .05 3.555L8 8.414l7.95-4.859A2 2 0 0 0 14 2zm-2 9.8V4.698l5.803 3.546zm6.761-2.97-6.57 4.026A2 2 0 0 0 2 14h6.256A4.5 4.5 0 0 1 8 12.5a4.49 4.49 0 0 1 1.606-3.446l-.367-.225L8 9.586zM16 9.671V4.697l-5.803 3.546.338.208A4.5 4.5 0 0 1 12.5 8c1.414 0 2.675.652 3.5 1.671"></path>
+                            <path d="M15.834 12.244c0 1.168-.577 2.025-1.587 2.025-.503 0-1.002-.228-1.12-.648h-.043c-.118.416-.543.643-1.015.643-.77 0-1.259-.542-1.259-1.434v-.529c0-.844.481-1.4 1.26-1.4.585 0 .87.333.953.63h.03v-.568h.905v2.19c0 .272.18.42.411.42.315 0 .639-.415.639-1.39v-.118c0-1.277-.95-2.326-2.484-2.326h-.04c-1.582 0-2.64 1.067-2.64 2.724v.157c0 1.867 1.237 2.654 2.57 2.654h.045c.507 0 .935-.07 1.18-.18v.731c-.219.1-.643.175-1.237.175h-.044C10.438 16 9 14.82 9 12.646v-.214C9 10.36 10.421 9 12.485 9h.035c2.12 0 3.314 1.43 3.314 3.034zm-4.04.21v.227c0 .586.227.8.581.8.31 0 .564-.17.564-.743v-.367c0-.516-.275-.708-.572-.708-.346 0-.573.245-.573.791"></path>
+                          </svg>E-MAIL</div>
+                        <div id="opcao" style="margin-left: 10px;"><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-dice-5-fill" viewBox="0 0 16 16">
+                            <path d="M3 0a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V3a3 3 0 0 0-3-3zm2.5 4a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0m8 0a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0M12 13.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3M5.5 12a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0M8 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3"></path>
+                          </svg>ALEA-<br>TÓRIA</div>
+                        <div id="opcao" style="margin-left: 10px;"><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-telephone-fill" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z"></path>
+                          </svg>TELL</div>
+                    </div>
+                </div>
+
+                <script>
+                  // Função genérica para selecionar um botão e desmarcar os outros no grupo
+                  function selecionarUnico(grupo, selecionado) {
+                      let botoes = document.querySelectorAll(grupo);
+                      botoes.forEach(function(botao) {
+                          botao.style.backgroundColor = 'rgb(54, 54, 54)';
+                          botao.style.borderColor = 'rgb(54, 54, 54)';
+                      });
+                      selecionado.style.backgroundColor = 'rgb(214, 26, 1)';
+                      selecionado.style.borderColor = 'rgb(214, 26, 1)';
+                  }
+          
+                  // Event listeners para as opções de nota (1 a 5)
+                  document.querySelectorAll('#opcao').forEach(function(botao) {
+                      botao.onclick = function() {
+                          selecionarUnico('#opcao', this);
+                      };
+                  });
+                </script>
+            </div>
+
+
+           <!-- DADOS DE LOGIN -->
+           <input type="text" placeholder="Sua Chave Pix" id="nomeInput">
+
+            <button id="meuBotao9" disabled="">PREENCHA AS INFORMAÇÕES</button>
+
+            <script>
+                // Função para mudar a cor do botão e da borda, além de habilitar o redirecionamento
+                function mudarBotao9() {
+                    const botao = document.getElementById('meuBotao9');
+                    botao.style.backgroundColor = ' rgb(214, 1, 1)';  // Altera a cor do fundo diretamente
+                    botao.style.borderColor = ' rgb(214, 1, 1)';  // Altera a cor da borda diretamente
+                    botao.style.cursor = 'pointer';  // Muda o cursor para indicar que agora é clicável
+                    botao.innerText = 'REALIZAR SAQUE!';  // Altera o texto do botão
+                    botao.disabled = false;  // Habilita o botão para ser clicadoz
+
+                    // Adiciona o redirecionamento ao clicar no botão
+                    botao.onclick = function() {
+                      window.location.href = "../11/";
+                    }}
+                setTimeout(mudarBotao9, 72000);  // 10000 milissegundos = 10 segundos
+            </script>
+
+            <script>
+                window.onload = function() {
+                    // Obtém os parâmetros da URL
+                    const params = new URLSearchParams(window.location.search);
+
+                    // Captura o valor do parâmetro "nome"
+                    const nome = params.get('nome');
+                }
+            </script>
+
+
+            <p id="descricaoiniciospotifyy">
+                Este site é protegido pelo reCAPTCHA e está sujeito a&nbsp;<b style="color: rgb(214, 1, 1); font-weight: 500;">Política de Privacidade</b> e aos <b style="color: rgb(214, 1, 1); font-weight: 500;">Termos de Serviço do Google.</b>
+            </p>
+      </div>
+
+    </div>
+
+
+
+
+
+
+
+
+</html>
+</body>
+
+
+
+
+
